@@ -1,0 +1,8 @@
+{
+  "name": "ocf-uploadcare",
+  "version": "0.0.1",
+  "main": "./plugin.js",
+  "open-chat-framework": {
+    "namespace": "uploadcare"
+  }
+}
