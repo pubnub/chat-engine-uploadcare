@@ -1,5 +1,5 @@
 module.exports = (config) => {
-        
+
     // these are new methods that will be added to the extended class
     class extension {
         bind(widget) {
@@ -10,7 +10,7 @@ module.exports = (config) => {
 
             widget.onUploadComplete((info) => {
 
-                this.parent.send(['$' + namespace, 'upload'].join('.'), info);
+                this.parent.send(['$uploadcare', 'upload'].join('.'), info);
                 widget.value(null);
 
             });
@@ -20,6 +20,7 @@ module.exports = (config) => {
 
     // add this plugin to the Chat classes
     return {
+        namespace: 'uploadcare',
         extends: {
             Chat: extension,
             GlobalChat: extension
