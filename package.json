@@ -4,5 +4,8 @@
   "main": "./plugin.js",
   "open-chat-framework": {
     "namespace": "uploadcare"
+  },
+  "dependencies": {
+    "ocf": "^0.0.2"
   }
 }
