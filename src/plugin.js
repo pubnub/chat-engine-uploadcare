@@ -10,7 +10,7 @@ module.exports = (config) => {
 
             widget.onUploadComplete((info) => {
 
-                this.parent.send(['$uploadcare', 'upload'].join('.'), info);
+                this.parent.emit(['$uploadcare', 'upload'].join('.'), info);
                 widget.value(null);
 
             });
