@@ -51,7 +51,7 @@ chat.on('$uploadcare.upload', (payload) => {
 });
 ```
  */
-module.exports = (config) => {
+module.exports = () => {
 
     class extension {
 
@@ -91,8 +91,7 @@ module.exports = (config) => {
     return {
         namespace: 'uploadcare',
         extends: {
-            Chat: extension,
-            GlobalChat: extension
+            Chat: extension
         }
     }
 
