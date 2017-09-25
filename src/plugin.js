@@ -16,7 +16,7 @@ Include the [Uploadcare](https://uploadcare.com) Javascript files and configure 
 </script>
 <script charset="utf-8" src="//ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js"></script>
 
-<script src="dist/ocf-uploadcare.js" type="text/javascript"></script>
+<script src="dist/chat-engine-uploadcare.js" type="text/javascript"></script>
 ```
 
 Initialize the ```uploadcare.Widget```.
@@ -34,7 +34,7 @@ let chat = new ChatEngine.Chat('uploads');
 Add the plugin to the {@link Chat}.
 
 ```js
-chat.plugin(OpenChatFramework.plugin['chat-engine-uploadcare']());
+chat.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
 ```
 
 Bind the widget to the {@link Chat}.
