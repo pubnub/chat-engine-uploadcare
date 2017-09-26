@@ -1,6 +1,12 @@
 // In this example we are going to create a chat client
 // With the uploadcare plugin to provide for uploading files
 
+// These are our Uploadcare variables from the Uploadcare setup process
+// https://uploadcare.com/documentation/widget/#install
+UPLOADCARE_LOCALE = "en";
+UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive";
+UPLOADCARE_PUBLIC_KEY = "19126fa911640117d6d6";
+
 // get some references to our UI elements
 const input = document.getElementById('input');
 const output = document.getElementById('output');
