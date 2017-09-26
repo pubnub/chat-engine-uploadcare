@@ -46,7 +46,7 @@ CE.on('$.ready', () => {
     // when a message event is emitted on the global channel add text to the chat log
     CE.global.on('message', (payload) => {
 
-        output.append($('<p><strong>' + payload.sender.uuid + ':</strong> ' + payload.data.text + '</p>'));
+        $(output).append($('<p><strong>' + payload.sender.uuid + ':</strong> ' + payload.data.text + '</p>'));
 
     });
 

@@ -1,6 +1,6 @@
 # Uploadcare Plugin for Chat Engine
 
-Adds the ability to upload images in ChatEngine.Chats via UploadCare service
+Adds the ability to upload images in ChatEngine chats via [UploadCare](https://uploadcare.com/) service
 
 ### Quick Start
 
@@ -21,6 +21,9 @@ CE.global.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
 ```
 
 2. Bind UploadCare to a UI element
+
+Check out the [UploadCare Setup Instructions](https://uploadcare.com/documentation/widget/#install)
+
 ```javascript
 const widget = uploadcare.Widget('[role=uploadcare-uploader]');
 CE.global.uploadcare.bind(widget);
