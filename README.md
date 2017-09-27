@@ -1,6 +1,6 @@
 # Uploadcare Plugin for Chat Engine
 
-Adds the ability to upload images in a ChatEngine Chat via [UploadCare](https://uploadcare.com/) service
+Adds the ability to upload images in a ChatEngine chat via [UploadCare](https://uploadcare.com/) service
 
 Check out the [UploadCare Setup Instructions](https://uploadcare.com/documentation/widget/#install)
 
