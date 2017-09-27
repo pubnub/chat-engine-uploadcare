@@ -1,37 +1,36 @@
 # Uploadcare Plugin for Chat Engine
 
-Adds the ability to upload images in ChatEngine chats via [UploadCare](https://uploadcare.com/) service
+Adds the ability to upload images in a ChatEngine Chat via [UploadCare](https://uploadcare.com/) service
+
+Check out the [UploadCare Setup Instructions](https://uploadcare.com/documentation/widget/#install)
 
 ### Quick Start
 
 0. Have ChatEngine instantiated and connected, and have a channel you want to upload images on
-```javascript
-const CE = ChatEngineCore.create({
+```js
+const ChatEngine = ChatEngineCore.create({
     publishKey: 'pub-key-here',
-    subscribeKey: 'sub-key-here',
+    subscribeKey: 'sub-key-here'
 });
 
-CE.connect('Username');
-CE.on('$.ready', () => { ... }
+ChatEngine.connect('Username');
+ChatEngine.on('$.ready', () => { ... });
 ```
 
 1. Attach this plugin to the channel you want, in this case global
-```javascript
-CE.global.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
+```js
+ChatEngine.global.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
 ```
 
 2. Bind UploadCare to a UI element
-
-Check out the [UploadCare Setup Instructions](https://uploadcare.com/documentation/widget/#install)
-
-```javascript
+```js
 const widget = uploadcare.Widget('[role=uploadcare-uploader]');
-CE.global.uploadcare.bind(widget);
+ChatEngine.global.uploadcare.bind(widget);
 ```
 
 3. Listen for the `$uploadcare.upload` events on your channel
-```javascript
-CE.global.on('$uploadcare.upload', (payload) => {
+```js
+ChatEngine.global.on('$uploadcare.upload', (payload) => {
     console.log(payload.data.cdnUrl);
 });
 ```

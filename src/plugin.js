@@ -1,56 +1,43 @@
 /**
-@module chat-engine-uploadcare
-@requires {@link ChatEngine}
+* Emits the ```$uploadCare.upload``` event when UploadCare completes an uplaod 
+* @module chat-engine-uploadcare
+* @requires {@link ChatEngine}
 */
 
 /**
- * @function
- * @description
-Include the [Uploadcare](https://uploadcare.com) Javascript files and configure the widget. Check out the [Uploadcare Widget Docs](https://uploadcare.com/documentation/javascript_api/v2/) for more information.
-
-```html
-<script>
-  UPLOADCARE_LOCALE = "en";
-  UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive";
-  UPLOADCARE_PUBLIC_KEY = "YOUR_UPLOADCARE_KEY";
-</script>
-<script charset="utf-8" src="//ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js"></script>
-
-<script src="dist/chat-engine-uploadcare.js" type="text/javascript"></script>
-```
-
-Initialize the ```uploadcare.Widget```.
-
-```js
-let widget = uploadcare.Widget('[role=uploadcare-uploader]');
-```
-
-Create a new ChatEngine {@link Chat}.
-
-```js
-let chat = new ChatEngine.Chat('uploads');
-```
-
-Add the plugin to the {@link Chat}.
-
-```js
-chat.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
-```
-
-Bind the widget to the {@link Chat}.
-
-```js
-chat.uploadcare.bind(widget);
-```
-
-Listen to upload events from the {@link Chat}.
-
-```js
-chat.on('$uploadcare.upload', (payload) => {
-    console.log('upload', payload.data.cdnUrl, 'from', payload.sender.uuid);
-});
-```
- */
+* @function
+* @example
+* Include the [Uploadcare](https://uploadcare.com) Javascript files and configure the widget. Check out the [Uploadcare Widget Docs](https://uploadcare.com/documentation/javascript_api/v2/) for more information.
+* 
+* ```html
+* <script>
+*   UPLOADCARE_LOCALE = "en";
+*   UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive";
+*   UPLOADCARE_PUBLIC_KEY = "YOUR_UPLOADCARE_KEY";
+* </script>
+* <script charset="utf-8" src="//ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js"></script>
+* 
+* <script src="dist/chat-engine-uploadcare.js" type="text/javascript"></script>
+* ```
+* ```js
+* // initialize the UploadCare Widget
+* let widget = uploadcare.Widget('[role=uploadcare-uploader]');
+* 
+* // create a new ChatEngine Chat.
+* let chat = new ChatEngine.Chat('uploads');
+* 
+* // add the plugin to the Chat.
+* chat.plugin(ChatEngineCore.plugin['chat-engine-uploadcare']());
+* 
+* // bind the widget to the Chat.
+* chat.uploadcare.bind(widget);
+* 
+* Listen to upload events from the {@link Chat}.
+* chat.on('$uploadcare.upload', (payload) => {
+*     console.log('upload', payload.data.cdnUrl, 'from', payload.sender.uuid);
+* });
+* ```
+*/
 module.exports = () => {
 
     class extension {
