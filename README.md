@@ -6,11 +6,14 @@ Check out the [UploadCare Setup Instructions](https://uploadcare.com/documentati
 
 ### Quick Start
 
-0. Have ChatEngine instantiated and connected, and have a channel you want to upload images on
+0. Have a ChatEngine server running already, instantiate a client and connect it
 ```js
 const ChatEngine = ChatEngineCore.create({
     publishKey: 'pub-key-here',
     subscribeKey: 'sub-key-here'
+}, {
+    endpoint: 'http://chatengine:server/',
+    globalChannel: 'global-channel-name'
 });
 
 ChatEngine.connect('Username');
