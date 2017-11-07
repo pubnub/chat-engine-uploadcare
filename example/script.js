@@ -17,11 +17,8 @@ let submit = function () {};
 
 // create an instance of chat-engine
 const ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-c6303bb2-8bf8-4417-aac7-e83b52237ea6',
-    subscribeKey: 'sub-c-67db0e7a-50be-11e7-bf50-02ee2ddab7fe',
-}, {
-    endpoint: 'http://localhost:3000/insecure',
-    globalChannel: 'uploadcare-example-2'
+    publishKey: 'pub-c-0f43f9fb-4f9a-48d9-90fd-807ba0e7e74f',
+    subscribeKey: 'sub-c-77a1b1a0-c3fb-11e7-a179-ca4904e23f81',
 });
 
 // connect to the network

@@ -2,10 +2,8 @@
 
 ![alt gifs are awesome, right?](output.gif)
 
-## How to run
-Install the dependencies and start a local web server
+## In this directory run
 ```sh
 npm install 
-http-server
+npm start
 ```
-Then navigate to the URL the web server provides
