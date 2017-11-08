@@ -8,7 +8,7 @@ UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr sk
 UPLOADCARE_PUBLIC_KEY = "19126fa911640117d6d6";
 
 // get some references to our UI elements
-const input = document.getElementById('input');
+const input = $('#input');
 const widget = uploadcare.Widget('[role=uploadcare-uploader]');
 
 // get some references to functions
@@ -17,12 +17,12 @@ let submit = function () {};
 
 // create an instance of chat-engine
 const ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-0f43f9fb-4f9a-48d9-90fd-807ba0e7e74f',
-    subscribeKey: 'sub-c-77a1b1a0-c3fb-11e7-a179-ca4904e23f81',
+    publishKey: 'pub-c-c2a407d1-2771-4d22-9063-bd538c8d720f',
+    subscribeKey: 'sub-c-72ef270e-c41a-11e7-8c2e-7612aca27832'
 });
 
 // connect to the network
-ChatEngine.connect('George Costanza', {}, 'auth-key');
+ChatEngine.connect('George-Costanza', {}, 'auth-key');
 
 // when the connection is ready, do some stuff
 ChatEngine.on('$.ready', () => {
@@ -57,10 +57,10 @@ ChatEngine.on('$.ready', () => {
     send = function () {
 
         ChatEngine.global.emit('message', {
-            text: input.value
+            text: input.val()
         });
 
-        input.value = '';
+        input.val('');
 
         return false;
 
