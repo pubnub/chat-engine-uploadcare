@@ -1,5 +1,19 @@
 // In this example we are going to create a chat client
 // With the uploadcare plugin to provide for uploading files
+const YOUR_PUBLISH_KEY = '';
+const YOUR_SUBSCRIBE_KEY = '';
+
+// just making sure you're paying attention
+if (YOUR_PUBLISH_KEY === '' || YOUR_SUBSCRIBE_KEY === '') {
+    alert('You forgot to enter your keys');
+}
+
+//    ________          __  ______            _          
+//   / ____/ /_  ____ _/ /_/ ____/___  ____ _(_)___  ___ 
+//  / /   / __ \/ __ `/ __/ __/ / __ \/ __ `/ / __ \/ _ \
+// / /___/ / / / /_/ / /_/ /___/ / / / /_/ / / / / /  __/
+// \____/_/ /_/\__,_/\__/_____/_/ /_/\__, /_/_/ /_/\___/ 
+//                                  /____/               
 
 // These are our Uploadcare variables from the Uploadcare setup process
 // https://uploadcare.com/documentation/widget/#install
@@ -17,8 +31,8 @@ let submit = function () {};
 
 // create an instance of chat-engine
 const ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-2d798b67-5637-4429-baaa-f7a559763cd8',
-    subscribeKey: 'sub-c-c12ea6c2-c4ee-11e7-b2fd-1e2f18d1069d'
+    publishKey: YOUR_PUBLISH_KEY,
+    subscribeKey: YOUR_SUBSCRIBE_KEY
 });
 
 // connect to the network
