@@ -1,5 +1,19 @@
 // In this example we are going to create a chat client
 // With the uploadcare plugin to provide for uploading files
+const YOUR_PUBLISH_KEY = '';
+const YOUR_SUBSCRIBE_KEY = '';
+
+// just making sure you're paying attention
+if (YOUR_PUBLISH_KEY === '' || YOUR_SUBSCRIBE_KEY === '') {
+    alert('You forgot to enter your keys');
+}
+
+//    ________          __  ______            _          
+//   / ____/ /_  ____ _/ /_/ ____/___  ____ _(_)___  ___ 
+//  / /   / __ \/ __ `/ __/ __/ / __ \/ __ `/ / __ \/ _ \
+// / /___/ / / / /_/ / /_/ /___/ / / / /_/ / / / / /  __/
+// \____/_/ /_/\__,_/\__/_____/_/ /_/\__, /_/_/ /_/\___/ 
+//                                  /____/               
 
 // These are our Uploadcare variables from the Uploadcare setup process
 // https://uploadcare.com/documentation/widget/#install
@@ -8,7 +22,7 @@ UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr sk
 UPLOADCARE_PUBLIC_KEY = "19126fa911640117d6d6";
 
 // get some references to our UI elements
-const input = document.getElementById('input');
+const input = $('#input');
 const widget = uploadcare.Widget('[role=uploadcare-uploader]');
 
 // get some references to functions
@@ -17,15 +31,12 @@ let submit = function () {};
 
 // create an instance of chat-engine
 const ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-c6303bb2-8bf8-4417-aac7-e83b52237ea6',
-    subscribeKey: 'sub-c-67db0e7a-50be-11e7-bf50-02ee2ddab7fe',
-}, {
-    endpoint: 'http://localhost:3000/insecure',
-    globalChannel: 'uploadcare-example-2'
+    publishKey: YOUR_PUBLISH_KEY,
+    subscribeKey: YOUR_SUBSCRIBE_KEY
 });
 
 // connect to the network
-ChatEngine.connect('George Costanza', {}, 'auth-key');
+ChatEngine.connect('George-Costanza', {}, 'auth-key');
 
 // when the connection is ready, do some stuff
 ChatEngine.on('$.ready', () => {
@@ -60,10 +71,10 @@ ChatEngine.on('$.ready', () => {
     send = function () {
 
         ChatEngine.global.emit('message', {
-            text: input.value
+            text: input.val()
         });
 
-        input.value = '';
+        input.val('');
 
         return false;
 
