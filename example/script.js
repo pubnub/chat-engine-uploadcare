@@ -1,19 +1,22 @@
 // In this example we are going to create a chat client
 // With the uploadcare plugin to provide for uploading files
-const YOUR_PUBLISH_KEY = '';
-const YOUR_SUBSCRIBE_KEY = '';
+// const YOUR_PUBLISH_KEY = '';
+// const YOUR_SUBSCRIBE_KEY = '';
+
+const YOUR_PUBLISH_KEY = 'pub-c-01491c54-379f-4d4a-b20b-9a03c24447c7';
+const YOUR_SUBSCRIBE_KEY = 'sub-c-eaf4a984-4356-11e8-91e7-8ad1b2d46395';
 
 // just making sure you're paying attention
 if (YOUR_PUBLISH_KEY === '' || YOUR_SUBSCRIBE_KEY === '') {
     alert('You forgot to enter your keys');
 }
 
-//    ________          __  ______            _          
-//   / ____/ /_  ____ _/ /_/ ____/___  ____ _(_)___  ___ 
+//    ________          __  ______            _
+//   / ____/ /_  ____ _/ /_/ ____/___  ____ _(_)___  ___
 //  / /   / __ \/ __ `/ __/ __/ / __ \/ __ `/ / __ \/ _ \
 // / /___/ / / / /_/ / /_/ /___/ / / / /_/ / / / / /  __/
-// \____/_/ /_/\__,_/\__/_____/_/ /_/\__, /_/_/ /_/\___/ 
-//                                  /____/               
+// \____/_/ /_/\__,_/\__/_____/_/ /_/\__, /_/_/ /_/\___/
+//                                  /____/
 
 // These are our Uploadcare variables from the Uploadcare setup process
 // https://uploadcare.com/documentation/widget/#install
@@ -36,7 +39,7 @@ const ChatEngine = ChatEngineCore.create({
 });
 
 // connect to the network
-ChatEngine.connect('George-Costanza', {}, 'auth-key');
+ChatEngine.connect('George-Costanza');
 
 // when the connection is ready, do some stuff
 ChatEngine.on('$.ready', () => {
