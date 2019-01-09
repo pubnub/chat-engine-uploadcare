@@ -34,3 +34,7 @@ ChatEngine.global.on('$uploadcare.upload', (payload) => {
     console.log(payload.data.cdnUrl);
 });
 ```
+
+## Support
+
+- If you **need help**, have a **general question** a **feature request** or to file a **bug**, contact <support@pubnub.com>
