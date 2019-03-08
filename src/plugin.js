@@ -1,4 +1,5 @@
 /**
+* @overview Uses [UploadCare](https://uploadcare.com/) service to upload images and render them in chats. <br> <img src="plugins/chat-engine-uploadcare/output.gif" height="400"></img>
 * Emits the ```$uploadCare.upload``` event when UploadCare completes an uplaod
 * @module chat-engine-uploadcare
 * @requires {@link ChatEngine}
